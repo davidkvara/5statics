@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>მარქაფი</title>
+  <link rel="stylesheet" href="./App.css">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .article-thumb,
+    .thumbnail {
+      background: peachpuff;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <header class="header">
+      <h1 class="title">
+        <a href="/">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32">
+            <path fill="currentColor" d="M16 7 C13 7 2 9 2 16 C2 23 6 23 10 24 L11 28 L12 26 L20 26 L21 28 L22 24 C26 23 30 23 30 16 C30 9 19 7 16 7 M4 18 A4 4 0 0 1 12 18 A4 4 0 0 1 4 18 M20 18 A4 4 0 0 1 28 18 A4 4 0 0 1 20 18 "
+            />
+          </svg>
+        </a>
+      </h1>
+      <nav class="nav">
+        <a href="#writing" class="navlink">writing</a>
+        <a href="#reading" class="navlink">reading</a>
+      </nav>
+    </header>
+
+    <div class="hero-banner">
+      <div class="wrapper">
+        <p>
+          <strong>adam morse. designer in london</strong>
+        </p>
+        <h1 class="text-large">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+      </div> <!-- wrapper -->
+    </div> <!-- hero-banner -->
+
+    <section class="featured-work">
+      <div class="wrapper">
+        <h2 class="sec-title">work</h2>
+        <div class="works">
+          <article class="work">
+            <div class="article-thumb">Media</div>
+            <h2 class="article-title">Tachyons</h2>
+            <p class="article-description">Functional CSS Toolkit</p>
+          </article>
+          <article class="work">
+            <div class="article-thumb">Media</div>
+            <h2 class="article-title">Compositor</h2>
+            <p class="article-description">Tools for designers</p>
+          </article>
+          <article class="work">
+            <div class="article-thumb">Media</div>
+            <h2 class="article-title">MrsJxn</h2>
+            <p class="article-description">Post-future beats</p>
+          </article>
+        </div> <!-- works -->
+
+        <div class="works-2">
+          <div class="article-large">
+            <div class="thumbnail">Media</div>
+            <h2 class="article-title">Up &amp; in Thirds</h2>
+            <p class="article-description">A collection of photographs</p>
+          </div>
+          <div class="article-large">
+            <div class="thumbnail">Media</div>
+            <h2 class="article-title">Gfffs</h2>
+            <p class="article-description">Hi-def gifs for the super-bored</p>
+          </div>
+        </div> <!-- works-2 -->
+
+      </div> <!-- wrapper -->
+    </section>
+    <div class="posts">
+      <div class="wrapper">
+        <div class="section">
+          <h2 id="writing" class="sec-title">writing</h2>
+          <div class="writings-list">
+            <a href="" class="post">
+              <h3>
+                Learnable Programming
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                No Silver-Bullet —Essence and Accident in Software Engineering
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                Words as Material
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                Material Honesty on the Web
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                Words
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                Patterns for Style Composition in React
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                A classless class—on using more classes in your HTML
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                Code Smells in CSS
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                About HTML Semantics Front-end Architecture
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                The Media Object Saves Hundreds of Lines of Cod
+              </h3>
+            </a>
+          </div> <!-- writings list -->
+        </div> <!-- section -->
+
+        <div class="section">
+          <h2 id="reading" class="sec-title">reading list</h2>
+          <div class="readings-list">
+            <a href="" class="post">
+              <h3>
+                CSS and Scalability
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                Veil of Ignorance
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                Growing up with Dogma
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                Design Systems
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                Too Many Tools and Frameworks
+              </h3>
+            </a>
+            <a href="" class="post">
+              <h3>
+                Webfont
+              </h3>
+            </a>
+          </div> <!-- reading list -->
+        </div> <!-- section -->
+
+      </div> <!-- wrapper -->
+    </div> <!-- posts -->
+
+    <footer class="footer">Goodbye!</footer>
+  </div> <!-- root -->
+
+</body>
+</html>
