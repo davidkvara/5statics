@@ -1,6 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import App from "./adammorse/App";
+import { readingList, writingList } from "./adammorse/PostListData";
+import { workList, workListLarge } from "./adammorse/worksData";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const adamMorseSite = (
+  <App
+    readings={readingList}
+    writings={writingList}
+    works={workList}
+    worksLarge={workListLarge}
+  />
+);
+
+ReactDOM.render(adamMorseSite, document.getElementById("root"));
