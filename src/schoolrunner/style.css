@@ -1,0 +1,38 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 14px;
+  line-height: 22.68px;
+  font-size: 1.4rem;
+  line-height: 2.268rem;
+  font-family: Avenir, HelveticaNeue, Helvetica Neue, Helvetica, Arial,
+    Lucida Grande, sans-serif;
+  color: #727c80;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* debug */
+img {
+  color: hotpink; /* to see alt text */
+}
+
+/* basic styles */
+
+.section-title {
+  font-family: Sharp Sans Medium, HelveticaNeue, Helvetica Neue, Helvetica,
+    Arial, Lucida Grande, sans-serif;
+  margin: 0;
+  padding: 0 0 2.6rem;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 39px;
+  font-size: 2.6rem;
+  line-height: 3.9rem;
+}
