@@ -1,9 +1,10 @@
 import React from "react";
+import NavLink from "./NavLink";
 
 const Header = () => (
   <header className="header">
     <div className="title">
-      <a href="/">
+      <a href="">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32">
           <path
             fill="currentColor"
@@ -13,13 +14,8 @@ const Header = () => (
       </a>
     </div>
     <nav className="nav">
-      {/* ბმულები გასაკომპონენტებელია */}
-      <a href="#writing" className="navlink">
-        writing
-      </a>
-      <a href="#reading" className="navlink">
-        reading
-      </a>
+      <NavLink to="#writing">writing</NavLink>
+      <NavLink to="#reading">reading</NavLink>
     </nav>
   </header>
 );

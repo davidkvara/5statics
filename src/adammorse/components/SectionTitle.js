@@ -1,8 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const SectionHeader = ({ marTop, ...rest }) => {
-  // getting warning but works properly (it has content)
-  return <h2 className="sec-title" {...rest} />;
+const SectionTitle = ({ children, ...props }) => {
+  return (
+    <h2 className="sec-title" {...props}>
+      {children}
+    </h2>
+  );
 };
 
-export default SectionHeader;
+SectionTitle.propTypes = {
+  children: PropTypes.string.isRequired
+};
+
+export default SectionTitle;

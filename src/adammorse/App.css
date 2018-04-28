@@ -91,15 +91,11 @@ a {
   }
 }
 
-.article-thumb {
+.thumbnail {
   padding-bottom: 54%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.work img {
-  max-width: 100%;
 }
 
 .article-title {
@@ -124,13 +120,6 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1em;
-}
-
-.article-large .thumbnail {
-  padding-bottom: 55%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 @media (min-width: 800px) {

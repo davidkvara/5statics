@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Banner = ({ author, description }) => (
   <div className="hero-banner">
@@ -10,5 +11,10 @@ const Banner = ({ author, description }) => (
     </div>
   </div>
 );
+
+Banner.propTypes = {
+  author: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
+};
 
 export default Banner;

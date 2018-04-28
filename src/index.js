@@ -1,18 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./schoolrunner/App";
-/* import App from "./adammorse/App";
+// import App from "./schoolrunner/App";
+import App from "./adammorse/App";
 import { readingList, writingList } from "./adammorse/PostListData";
-import { workList, workListLarge } from "./adammorse/worksData"; */
+import { workList } from "./adammorse/worksData";
 
-/* const adamMorseSite = (
-  <App
-    readings={readingList}
-    writings={writingList}
-    works={workList}
-    worksLarge={workListLarge}
-  />
-); */
+const adamMorseSite = (
+  <App readings={readingList} writings={writingList} works={workList} />
+);
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(adamMorseSite, document.getElementById("root"));
