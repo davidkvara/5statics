@@ -1,6 +1,7 @@
 import React from "react";
 import Wrapper from "./Wrapper";
 import ScTitle from "./SectionTitle";
+import SearchBox from "./SearchBox";
 
 export default props => {
   return (
@@ -8,9 +9,9 @@ export default props => {
       <Wrapper>
         <ScTitle>this will be a slider</ScTitle>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
-          labore voluptates, perspiciatis illum non maxime incidunt?
+          Mollitia labore voluptates, perspiciatis illum non maxime incidunt?
         </p>
+        <SearchBox />
       </Wrapper>
     </div>
   );

@@ -8,7 +8,7 @@ const Header = props => {
       <Wrapper>
         <div className="header-container">
           <h1 className="logo">
-            <a href="">TML.ge</a>
+            <a href="">TML</a>
           </h1>
           <Nav />
         </div>

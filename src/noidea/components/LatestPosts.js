@@ -6,7 +6,7 @@ export default props => {
   return (
     <div className="new-posts">
       <Wrapper>
-        <ScTitle>new posts here</ScTitle>
+        <ScTitle>New Posts</ScTitle>
         <ul>
           <li>
             <a href="">
