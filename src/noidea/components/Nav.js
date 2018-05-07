@@ -1,14 +1,27 @@
 import React from "react";
 import NavItem from "./NavItem";
 
-const Nav = () => {
+const Nav = props => {
+  function close() {
+    props.onClose();
+  }
   return (
     <nav className="nav">
-      <NavItem to="/">home</NavItem>
-      <NavItem to="/about">about</NavItem>
-      <NavItem to="/blog">blog</NavItem>
-      <NavItem to="/catalog">catalog</NavItem>
-      <NavItem to="/branches">branches</NavItem>
+      <NavItem onClick={close} to="/">
+        home
+      </NavItem>
+      <NavItem onClick={close} to="/about">
+        about
+      </NavItem>
+      <NavItem onClick={close} to="/blog">
+        blog
+      </NavItem>
+      <NavItem onClick={close} to="/catalog">
+        catalog
+      </NavItem>
+      <NavItem onClick={close} to="/branches">
+        branches
+      </NavItem>
     </nav>
   );
 };

@@ -26,7 +26,7 @@ class Header extends React.Component {
     this.setState({
       width: window.innerWidth
     });
-    if (Number(this.state.width) < 600) {
+    if (this.state.width < 601) {
       this.setState({ menuToggle: false });
     } else {
       this.setState({ menuToggle: true });
@@ -36,6 +36,13 @@ class Header extends React.Component {
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions);
   }
+
+  handleClose = () => {
+    // მობაილ ნავიგაციის ლინკის კლიკზე ნავბარს მალავს
+    if (this.state.width < 601) {
+      this.handleToggle();
+    }
+  };
 
   render() {
     return (
@@ -50,7 +57,7 @@ class Header extends React.Component {
                 menu
               </button>
             </div>
-            {this.state.menuToggle && <Nav />}
+            {this.state.menuToggle && <Nav onClose={this.handleClose} />}
           </div>
         </Wrapper>
       </header>
