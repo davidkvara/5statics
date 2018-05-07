@@ -57,8 +57,9 @@ ul {
   padding: 1.1rem 0;
 }
 
-nav {
+.nav {
   display: flex;
+  flex-direction: row;
 }
 
 .nav-a {
@@ -69,6 +70,23 @@ nav {
 .logo {
   margin: 0;
   font-size: 1rem;
+}
+
+.menu-btn {
+  position: absolute;
+  right: 1rem;
+  top: 0.8rem;
+  display: none;
+}
+
+.menu-toggle {
+  padding: 6px 8px;
+  background: none;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 0 #673ab7;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #666;
 }
 
 /* Slider and major sections */
@@ -132,8 +150,13 @@ nav {
 
 .book-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 2rem 1rem;
+}
+
+@media (min-width: 400px) {
+  .book-container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
 }
 
 .book-box {
@@ -223,6 +246,69 @@ nav {
 .f-center img {
   margin-right: 1rem;
 }
+
 .arr {
   padding-left: 1rem;
+}
+
+/* responsive menu */
+
+@media (max-width: 600px) {
+  /* responsive nav */
+  .nav {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .header-container {
+    flex-direction: column;
+  }
+
+  .nav-a {
+    padding: 1rem 0;
+  }
+
+  .nav-a:hover {
+    background: #f9f9f9;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  /* footer */
+
+  .footer-wrapper {
+    flex-direction: column;
+  }
+
+  .footer-wrapper li {
+    padding: 0 0 2rem 1rem;
+  }
+
+  .footer-wrapper li:first-child {
+    order: 1;
+  }
+
+  /* serach box */
+
+  .search-box {
+    right: 1rem;
+  }
+
+  .search {
+    width: 280px;
+  }
+}
+
+@media (max-width: 400px) {
+  .search-box {
+    padding: 1rem;
+  }
+
+  .search {
+    width: auto;
+  }
 }
