@@ -4,45 +4,10 @@ import { Link } from "react-router-dom";
 import Wrapper from "./Wrapper";
 
 class Header extends React.Component {
-  state = { menuToggle: true, width: window.innerWidth };
+  state = { navOpen: false };
 
-  handleToggle = () => {
-    this.setState({ menuToggle: !this.state.menuToggle });
-  };
-
-  componentDidMount() {
-    // მემგონი ძვირი ჯდება..
-    // მაგრამ რეალურ სიტუაციაში საერთოდ არ მოგვიწევს ამ ფუნქციის გამოძახება
-    // პროდუქციაში მაინც არ გავუშვებდი
-    this.setState(state => {
-      if (window.innerWidth < 601) {
-        return { menuToggle: false };
-      }
-    });
-    window.addEventListener("resize", this.updateDimensions);
-  }
-
-  updateDimensions = () => {
-    this.setState({
-      width: window.innerWidth
-    });
-    if (this.state.width < 601) {
-      this.setState({ menuToggle: false });
-    } else {
-      this.setState({ menuToggle: true });
-    }
-  };
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions);
-  }
-
-  handleClose = () => {
-    // მობაილ ნავიგაციის ლინკის კლიკზე ნავბარს მალავს
-    if (this.state.width < 601) {
-      this.handleToggle();
-    }
-  };
+  handleToggle = () => this.setState({ navOpen: !this.state.navOpen });
+  handleClose = () => this.setState({ navOpen: false });
 
   render() {
     return (
@@ -52,17 +17,26 @@ class Header extends React.Component {
             <h1 className="logo">
               <Link to="/">TML</Link>
             </h1>
-            <div className="menu-btn">
-              <button onClick={this.handleToggle} className="menu-toggle">
-                menu
-              </button>
-            </div>
-            {this.state.menuToggle && <Nav onClose={this.handleClose} />}
+            <MenuToggleButton onToggle={this.handleToggle}>
+              menu
+            </MenuToggleButton>
+            <Nav
+              onClose={this.handleClose}
+              className={this.state.navOpen && "open"}
+            />
           </div>
         </Wrapper>
       </header>
     );
   }
 }
+
+const MenuToggleButton = ({ onToggle, children }) => (
+  <div className="menu-btn">
+    <button onClick={onToggle} className="menu-toggle">
+      {children}
+    </button>
+  </div>
+);
 
 export default Header;

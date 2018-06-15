@@ -1,27 +1,19 @@
 import React from "react";
-import NavItem from "./NavItem";
+import { Link } from "react-router-dom";
+
+const NavItem = props => <Link {...props} className="nav-a" />;
 
 const Nav = props => {
-  function close() {
-    props.onClose();
+  function renderNavItem(to, text) {
+    return <NavItem to={to} children={text} onClick={props.onClose} />;
   }
   return (
-    <nav className="nav">
-      <NavItem onClick={close} to="/">
-        home
-      </NavItem>
-      <NavItem onClick={close} to="/about">
-        about
-      </NavItem>
-      <NavItem onClick={close} to="/blog">
-        blog
-      </NavItem>
-      <NavItem onClick={close} to="/catalog">
-        catalog
-      </NavItem>
-      <NavItem onClick={close} to="/branches">
-        branches
-      </NavItem>
+    <nav className={props.className ? "nav open" : "nav"}>
+      {renderNavItem("/", "home")}
+      {renderNavItem("/about", "about")}
+      {renderNavItem("/blog", "blog")}
+      {renderNavItem("/catalog", "catalog")}
+      {renderNavItem("/branches", "catalog")}
     </nav>
   );
 };
