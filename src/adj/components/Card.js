@@ -3,13 +3,13 @@ import React from "react";
 const Card = ({ mediaSrc, description }) => {
   return (
     <div className="card">
-      <div className="wrapper">
+      <div className="card-wrapper">
         <span>
-          <img src={mediaSrc} alt="" className="pic" />
+          <img src={mediaSrc} alt="" className="card-logo" />
         </span>
-        <p className="description">{description}</p>
+        <p className="card-description">{description}</p>
       </div>
-      <div className="connect">like on fb</div>
+      <div className="card-social">like on fb</div>
     </div>
   );
 };

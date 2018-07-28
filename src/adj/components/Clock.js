@@ -19,7 +19,7 @@ class Clock extends React.Component {
 
   render() {
     return (
-      <div {...this.props} className="clock">
+      <div {...this.props} className="clock-widget">
         {this.state.time.toLocaleTimeString([], {
           hour: "2-digit",
           minute: "2-digit",

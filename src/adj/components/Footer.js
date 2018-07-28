@@ -1,3 +1,5 @@
 import React from "react";
 
-export default props => <footer className="footer">{props.children}</footer>;
+const Footer = props => <footer className="footer">{props.children}</footer>;
+
+export default Footer;
