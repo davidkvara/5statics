@@ -13,7 +13,7 @@ const Nav = props => {
       {renderNavItem("/about", "about")}
       {renderNavItem("/blog", "blog")}
       {renderNavItem("/catalog", "catalog")}
-      {renderNavItem("/branches", "catalog")}
+      {renderNavItem("/branches", "branches")}
     </nav>
   );
 };
