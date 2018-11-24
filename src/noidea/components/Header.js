@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
 import Wrapper from "./Wrapper";
 
 class Header extends React.Component {
