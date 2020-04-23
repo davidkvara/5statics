@@ -4,7 +4,7 @@ import NavLink from "./NavLink";
 const Header = () => (
   <header className="header">
     <div className="title">
-      <a href="">
+      <a href="https://example.com">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32">
           <path
             fill="currentColor"

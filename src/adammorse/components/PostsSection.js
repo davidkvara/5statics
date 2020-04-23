@@ -1,23 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SectionTitle from "./SectionTitle";
 import Post from "./Post";
+import Wrapper from "./Wrapper";
 
-const PostsSection = ({ title, posts }) => {
+const PostsSection = ({ title, list }) => {
+  const titleID = title.split(" ");
+  const postList = list.map((post, i) => <Post key={i} text={post} />);
   return (
-    <div className="section">
-      {/* id გასაპარსია */}
-      <SectionTitle id="writing">{title}</SectionTitle>
-      <div className="data-list">
-        {posts.map((post, i) => <Post key={i} text={post} />)}
-      </div>
+    <div className="posts">
+      <Wrapper>
+        <div className="section">
+          <h2 id={titleID[0]} className="sec-title">
+            {title}
+          </h2>
+          <div className="data-list">{postList}</div>
+        </div>
+      </Wrapper>
     </div>
   );
 };
 
 PostsSection.propTypes = {
   title: PropTypes.string.isRequired,
-  posts: PropTypes.array.isRequired
+  list: PropTypes.array.isRequired,
 };
 
 export default PostsSection;
