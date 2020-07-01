@@ -1,23 +1,28 @@
 import React from "react";
-import NavLink from "./NavLink";
 
 const Header = () => (
   <header className="header">
     <div className="title">
-      <a href="https://example.com">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32">
-          <path
-            fill="currentColor"
-            d="M16 7 C13 7 2 9 2 16 C2 23 6 23 10 24 L11 28 L12 26 L20 26 L21 28 L22 24 C26 23 30 23 30 16 C30 9 19 7 16 7 M4 18 A4 4 0 0 1 12 18 A4 4 0 0 1 4 18 M20 18 A4 4 0 0 1 28 18 A4 4 0 0 1 20 18 "
-          />
-        </svg>
-      </a>
+      <a href="#top">{logoIcon}</a>
     </div>
     <nav className="nav">
-      <NavLink to="#writing">writing</NavLink>
-      <NavLink to="#reading">reading</NavLink>
+      <a href="#writing" className="navlink">
+        writing
+      </a>
+      <a href="#reading" className="navlink">
+        reading
+      </a>
     </nav>
   </header>
+);
+
+const logoIcon = (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32">
+    <path
+      fill="currentColor"
+      d="M16 7 C13 7 2 9 2 16 C2 23 6 23 10 24 L11 28 L12 26 L20 26 L21 28 L22 24 C26 23 30 23 30 16 C30 9 19 7 16 7 M4 18 A4 4 0 0 1 12 18 A4 4 0 0 1 4 18 M20 18 A4 4 0 0 1 28 18 A4 4 0 0 1 20 18 "
+    />
+  </svg>
 );
 
 export default Header;

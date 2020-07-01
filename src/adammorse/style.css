@@ -2,6 +2,7 @@
 html {
   color: #1d0016;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -14,7 +15,7 @@ a {
 .wrapper {
   max-width: 72rem;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 0 0.75rem;
 }
 
 /* header */
@@ -50,7 +51,7 @@ a {
 /* banner */
 
 .hero-banner {
-  padding: 128px 0;
+  padding: 8rem 0;
   background: #f0f5f8;
 }
 
@@ -60,22 +61,13 @@ a {
   margin: 0;
 }
 
-/* section title */
-.section {
-  margin-top: 64px;
-}
-
-.sec-title {
-  font-size: 14px;
+.posts-section-title {
+  font-size: 0.925rem;
   text-transform: uppercase;
 }
 
 /* work preview start */
 /* Articles */
-
-.featured-work {
-  padding-top: 64px;
-}
 
 .works {
   /* display: flex;
@@ -91,21 +83,21 @@ a {
   }
 }
 
-.thumbnail {
+.work-thumbnail {
   padding-bottom: 54%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.article-title {
+.work-title {
   margin-top: 8px;
   margin-bottom: 0;
   font-size: 20px;
   text-transform: capitalize;
 }
 
-.article-description {
+.work-description {
   font-weight: 400;
   line-height: 1.5;
   margin-top: 0;
@@ -115,15 +107,15 @@ a {
 
 /* Articles larger */
 
-.works-2 {
-  margin-top: 32px;
+.featured-work {
+  margin: 2rem 0 4rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1em;
 }
 
 @media (min-width: 800px) {
-  .works-2 {
+  .featured-work {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -131,34 +123,31 @@ a {
 /* posts */
 
 .posts {
-  margin-bottom: 128px;
+  margin-bottom: 6rem;
 }
 
 .post {
   display: block;
-  opacity: 1;
   text-decoration: none;
   transition: opacity 0.25s ease-out;
-  border-bottom: 1px solid;
+  border-bottom: 1px dotted;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.3em 0;
+  opacity: 0.8;
 }
 
 .post:hover,
 .post:focus {
-  opacity: 0.65;
-}
-
-.post h3 {
-  font-size: 20px;
-  margin: 0;
-  padding: 4px 0;
+  opacity: 0.9;
 }
 
 /* footer */
 
 .footer {
   background-color: #1d0016;
-  color: white;
-  padding: 1rem 2rem;
+  color: #fafafa;
+  padding: 1rem;
 }
 
 /* adjust sizes */

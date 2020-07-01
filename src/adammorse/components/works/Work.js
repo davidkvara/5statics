@@ -4,9 +4,12 @@ import PropTypes from "prop-types";
 const WorkArticle = ({ media, title, description }) => {
   return (
     <article className="work">
-      <div className="thumbnail" style={{ backgroundImage: `url(${media})` }} />
-      <h2 className="article-title">{title}</h2>
-      <p className="article-description">{description}</p>
+      <div
+        className="work-thumbnail"
+        style={{ backgroundImage: `url(${media})` }}
+      />
+      <h2 className="work-title">{title}</h2>
+      <p className="work-description">{description}</p>
     </article>
   );
 };
