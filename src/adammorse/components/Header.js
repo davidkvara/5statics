@@ -1,19 +1,16 @@
 import React from "react";
+import styled from "@emotion/styled";
 
-const Header = () => (
-  <header className="header">
-    <div className="title">
+export default () => (
+  <Header>
+    <div style={{ margin: 0, width: "2rem" }}>
       <a href="#top">{logoIcon}</a>
     </div>
-    <nav className="nav">
-      <a href="#writing" className="navlink">
-        writing
-      </a>
-      <a href="#reading" className="navlink">
-        reading
-      </a>
+    <nav style={{ display: "flex" }}>
+      <NavLink href="#writing">writing</NavLink>
+      <NavLink href="#reading">reading</NavLink>
     </nav>
-  </header>
+  </Header>
 );
 
 const logoIcon = (
@@ -25,4 +22,28 @@ const logoIcon = (
   </svg>
 );
 
-export default Header;
+const Header = styled.header`
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6em 1.2em;
+  @media (min-width: 600px) {
+    padding: 1em 2.4em;
+  }
+`;
+
+const NavLink = styled.a`
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.33s ease-in;
+  font-size: 12px;
+  margin: 0 1rem;
+
+  @media (min-width: 600px) {
+      margin: 0 1.5rem;
+
+`;

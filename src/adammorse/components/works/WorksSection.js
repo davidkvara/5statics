@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "@emotion/styled";
 import Wrapper from "../Wrapper";
 import Article from "./Work";
 
@@ -9,16 +10,35 @@ const WorksSection = ({ works }) => {
   return (
     <section>
       <Wrapper>
-        <h2 className="sec-title">work</h2>
-        <div className="works">{articles}</div>
+        <h2 style={{ fontSize: ".925rem", textTransform: "uppercase" }}>
+          work
+        </h2>
+        <WorksContainer>{articles}</WorksContainer>
 
-        <div className="featured-work">
+        <FeatWorksContainer>
           <Article {...featured1} />
           <Article {...featured2} />
-        </div>
+        </FeatWorksContainer>
       </Wrapper>
     </section>
   );
 };
+
+const WorksContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-gap: 1em;
+`;
+
+const FeatWorksContainer = styled.div`
+  margin: 2rem 0 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`;
 
 export default WorksSection;

@@ -21,6 +21,10 @@ export default () => (
       <Posts title={"writing"} list={writingList.list} />
       <Posts title={"reading list"} list={readingList.list} />
     </main>
-    <footer className="footer">GoodNight!</footer>
+    <footer
+      style={{ backgroundColor: "#1d0016", color: "#fafafa", padding: "1rem" }}
+    >
+      GoodNight!
+    </footer>
   </>
 );
