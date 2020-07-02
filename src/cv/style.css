@@ -1,0 +1,31 @@
+@font-face {
+  font-family: excelsior;
+  src: url("./assets/fonts/bpg_gel_excelsior.woff") format("woff");
+  unicode-range: U+10d0-10f0;
+  font-display: swap;
+}
+
+body {
+  background: whitesmoke;
+  font-family: excelsior, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.primary {
+  color: #00c6ff;
+  font-weight: 500;
+}
+
+::placeholder {
+  color: #999;
+}
