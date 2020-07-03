@@ -11,6 +11,7 @@ const ThemedButton = styled.button`
   color: #fff;
   padding: 0.75rem;
   border-radius: 3px;
+  font-size: 0.95rem;
   cursor: pointer;
 `;
 

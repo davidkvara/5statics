@@ -7,11 +7,13 @@ const Header = () => {
   return (
     <header style={{ background: "#284a63", color: "#fafafa" }}>
       <NavWrapper>
-        <Logo>cv</Logo>
+        <Logo>
+          <span className="primary">cv</span>.ge
+        </Logo>
         {/* სქროლი ნავიგაცია უნდა გავაკეთო, როგორც რეაქტის საიტზე */}
         <Nav>
           <NavLink href="#k">გამოწერა</NavLink>
-          <NavLink href="#k">რეგისტრაცია</NavLink>
+          {/* <NavLink href="#k">რეგისტრაცია</NavLink> */}
           <NavLink href="#k">შესვლა</NavLink>
           <NavLink href="#k">en</NavLink>
         </Nav>
@@ -23,11 +25,11 @@ const Header = () => {
             <span className="primary">შექმენი CV</span>. იპოვე სასურველი
             სამსახური.
           </Title>
-          <p>
+          <Description>
             <span className="primary">2223</span> ვაკანსია,{" "}
             <span className="primary">20561</span> კომპანია,{" "}
             <span className="primary">7931</span> CV
-          </p>
+          </Description>
         </Container>
       </div>
 
@@ -62,14 +64,20 @@ const NavLink = styled.a`
 `;
 
 const Logo = styled.div`
-  font-size: 1.4rem;
+  font-size: 2rem;
+  line-height: 1;
+  text-transform: uppercase;
 `;
 
 const Title = styled.h1`
   font-size: 1.7rem;
   @media (min-width: 768px) {
-    font-size: 2em;
+    font-size: 1.9em;
   }
+`;
+
+const Description = styled.p`
+  font-size: 0.95rem;
 `;
 
 export default Header;

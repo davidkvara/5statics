@@ -6,10 +6,11 @@ const Input = props => {
 };
 
 const SearchInput = styled.input`
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   border: 1px solid royalblue;
   border-radius: 3px;
-  font-size: 0.925rem;
+  font-size: 0.9rem;
+  line-height: 1.2;
   font-family: inherit;
 `;
 
