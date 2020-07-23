@@ -8,7 +8,7 @@ const Header = () => {
     <header style={{ background: "#284a63", color: "#fafafa" }}>
       <NavWrapper>
         <Logo>
-          <span className="primary">cv</span>.ge
+          <PrimaryText>cv</PrimaryText>.ge
         </Logo>
         {/* სქროლი ნავიგაცია უნდა გავაკეთო, როგორც რეაქტის საიტზე */}
         <Nav>
@@ -22,13 +22,12 @@ const Header = () => {
       <div className="pb5 pt4">
         <Container>
           <Title className="fw3">
-            <span className="primary">შექმენი CV</span>. იპოვე სასურველი
-            სამსახური.
+            <PrimaryText>შექმენი CV</PrimaryText>. იპოვე სასურველი სამსახური.
           </Title>
           <Description>
-            <span className="primary">2223</span> ვაკანსია,{" "}
-            <span className="primary">20561</span> კომპანია,{" "}
-            <span className="primary">7931</span> CV
+            <PrimaryText>2223</PrimaryText> ვაკანსია,{" "}
+            <PrimaryText>20561</PrimaryText> კომპანია,{" "}
+            <PrimaryText>7931</PrimaryText> CV
           </Description>
         </Container>
       </div>
@@ -37,6 +36,11 @@ const Header = () => {
     </header>
   );
 };
+
+const PrimaryText = styled.span`
+  color: ${props => props.theme.colors.primary};
+  font-weight: 500;
+`;
 
 const NavWrapper = styled.header`
   max-width: 1170px;
