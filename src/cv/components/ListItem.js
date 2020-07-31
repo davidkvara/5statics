@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const JobListItem = ({ id, title, location, source, date }) => {
+const JobListItem = ({ title, location, source, date }) => {
   return (
     <ListItem>
       <div className="pr3">

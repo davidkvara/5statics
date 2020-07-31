@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Container from "../common/Container";
-import SearchSection from "./SearchSection";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
@@ -10,7 +10,6 @@ const Header = () => {
         <Logo>
           <PrimaryText>cv</PrimaryText>.ge
         </Logo>
-        {/* სქროლი ნავიგაცია უნდა გავაკეთო, როგორც რეაქტის საიტზე */}
         <Nav>
           <NavLink href="#k">გამოწერა</NavLink>
           {/* <NavLink href="#k">რეგისტრაცია</NavLink> */}
@@ -32,7 +31,7 @@ const Header = () => {
         </Container>
       </div>
 
-      <SearchSection />
+      <SearchBar />
     </header>
   );
 };

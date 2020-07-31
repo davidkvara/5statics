@@ -5,7 +5,7 @@ import Container from "../common/Container";
 import SearchInput from "../common/Input";
 import Button from "../common/Button";
 
-const SearchForm = () => {
+const SearchBar = () => {
   return (
     <div style={{ background: "steelblue" }}>
       <Container>
@@ -34,4 +34,4 @@ const Form = styled.form`
   }
 `;
 
-export default SearchForm;
+export default SearchBar;
